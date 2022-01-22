@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab: Tab = .home
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ZStack {
+                VStack {
+                    switch selectedTab {
+                    case .home:
+                        HomeView()
+                    case .search:
+                        Text("This will be the search screen")
+                    case .profile:
+                        Text("This will be the profile screen")
+                    }
+                }
+                .padding(.horizontal, 8)
+                
+                CustomTabBar(selectedTab: $selectedTab)
+                    .padding(.horizontal, 8)
+            }
+            .navigationBarHidden(true)
+        }
     }
 }
 
