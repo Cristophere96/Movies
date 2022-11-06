@@ -26,12 +26,13 @@ struct CustomTabBar: View {
                     }
                     .frame(maxWidth: .infinity)
                 }
-                .foregroundColor(selectedTab == item.tab ? Color("mainColor") : .secondary)
+                .foregroundColor(selectedTab == item.tab ? Color.purple : .secondary)
             }
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 14)
         .frame(height: 60, alignment: .center)
+        .background(Color.purple.opacity(0.1))
         .background(.ultraThinMaterial)
         .customCorners(5, corners: [.topLeft, .topRight])
         .customCorners(24, corners: [.bottomLeft, .bottomRight])

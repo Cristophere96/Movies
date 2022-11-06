@@ -46,22 +46,17 @@ extension HomeViewModel: NowPlayingViewModelType {
             .getUpcomingMoviesInteractor
             .getUpcomingMovies()
         
-        let popularMoviesPublisher = self.dependencies
-            .getPopularMoviesInteractor
-            .getPopular()
-        
-        Publishers.Zip3(nowPlayingPublisher, upcomingMoviesPublisher, popularMoviesPublisher)
+        Publishers.Zip(nowPlayingPublisher, upcomingMoviesPublisher)
             .sink { [weak self] errorResult in
                 guard case .failure(let error) = errorResult else { return }
                 print(error)
                 self?.updateState {
                     self?.loading = false
                 }
-            } receiveValue: { [weak self] nowPlaying, upcoming, popular in
+            } receiveValue: { [weak self] nowPlaying, upcoming in
                 self?.updateState {
                     self?.moviesNowPlaying = nowPlaying.results
                     self?.upcomingMovies = upcoming.results
-                    self?.popularMovies = popular.results
                     self?.loading = false
                 }
             }

@@ -13,6 +13,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                Colors.backgroundColor.edgesIgnoringSafeArea(.all)
+                
                 VStack {
                     switch selectedTab {
                     case .home:

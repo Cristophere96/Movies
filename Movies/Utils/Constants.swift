@@ -13,4 +13,6 @@ public struct Constants {
         static let apiKey: String = "32d3f84e5f5f94880427c67ddb509893"
         static let baseImageURL: String = "https://image.tmdb.org/t/p/w500"
     }
+    
+    static let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
 }

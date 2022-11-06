@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B275C85928077EE0009DAE70 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B275C85828077EE0009DAE70 /* Colors.swift */; };
 		B27DCFE42794B4320083FA20 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DCFE32794B4320083FA20 /* TabItem.swift */; };
 		B28979D5279B583500FE5E95 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28979D4279B583500FE5E95 /* CustomTabBar.swift */; };
 		B28979D7279B609D00FE5E95 /* MoviesPosterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28979D6279B609D00FE5E95 /* MoviesPosterImage.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B275C85828077EE0009DAE70 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B27DCFE32794B4320083FA20 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		B28979D4279B583500FE5E95 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		B28979D6279B609D00FE5E95 /* MoviesPosterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPosterImage.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				B293F80127933BBD00BD3F62 /* Constants.swift */,
 				B293F80C27934C5300BD3F62 /* CustomErrors.swift */,
 				B293F80E27934E2800BD3F62 /* StatusCode.swift */,
+				B275C85828077EE0009DAE70 /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				B293F7CD2793318600BD3F62 /* MoviesApp.swift in Sources */,
 				B293F821279365AC00BD3F62 /* HomeView.swift in Sources */,
 				B28979E3279B9C4900FE5E95 /* GetPopularMoviesInteractor.swift in Sources */,
+				B275C85928077EE0009DAE70 /* Colors.swift in Sources */,
 				B293F8262793682200BD3F62 /* MoviesRepository+Injection.swift in Sources */,
 				B28979D5279B583500FE5E95 /* CustomTabBar.swift in Sources */,
 				B293F80F27934E2800BD3F62 /* StatusCode.swift in Sources */,

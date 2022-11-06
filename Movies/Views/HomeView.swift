@@ -15,29 +15,15 @@ struct HomeView: View {
         ZStack {
             if viewModel.loading {
                 ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: Color("mainColor")))
+                    .progressViewStyle(CircularProgressViewStyle(tint: Colors.mainColor))
                     .scaleEffect(2.0)
             } else {
                 VStack(alignment: .leading) {
-                    CustomNavBar()
-                    
                     ScrollView(showsIndicators: false) {
                         Section(title: "In Theatres") {
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 0) {
-                                    ForEach(viewModel.moviesNowPlaying, id: \.id) { movie in
-                                        MovieCard(movie: movie)
-                                    }
-                                }
-                            }
-                        }
-                        
-                        Section(title: "Upcoming") {
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 0) {
-                                    ForEach(viewModel.upcomingMovies, id: \.id) { movie in
-                                        MovieCard(movie: movie)
-                                    }
+                            LazyVGrid(columns: Constants.gridItems, spacing: 16) {
+                                ForEach(viewModel.moviesNowPlaying, id: \.id) { movie in
+                                    MovieCard(movie: movie)
                                 }
                             }
                         }
